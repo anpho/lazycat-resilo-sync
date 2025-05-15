@@ -1,0 +1,28 @@
+lzc-sdk-version: '0.1'
+name: Resilio Sync
+package: anpho.lzcapp.resilio
+version: latest
+application:
+  multi_instance: true
+  background_task: true
+  routes:
+    - /=http://resilio.anpho.lzcapp.resilio.lzcapp:8888
+  subdomain: resilio
+  ingress:
+    - protocol: udp
+      service: resilio
+      port: 55555
+    - protocol: tcp
+      service: resilio
+      port: 55555
+    - protocol: tcp
+      service: resilio
+      port: 8888
+services:
+  resilio:
+    image: registry.lazycat.cloud/anpho/resilio/sync:c5dbffd432c06214
+    binds:
+    #  - /lzcapp/run/mnt/home/ResilioSync:/mnt/sync
+      - /lzcapp/var/data:/mnt/sync
+      - /lzcapp/run/mnt/home/ResilioSync:/mnt/mounted_folders/LazyCat
+    #  - ./config:/config
