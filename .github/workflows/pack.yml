@@ -44,6 +44,7 @@ jobs:
           expect -f ./int.exp "$USERNAME" "$PASSWORD"
           
           TAGS=$(docker run --rm gcr.io/go-containerregistry/crane:latest ls resilio/sync)
+          echo "TAGS: $TAGS"
           LATEST_TAG=$(echo "$TAGS" | grep -v 'latest\|master\|wv' | sort -V | tail -n1)
           echo "Latest: $LATEST_TAG"
           sed -i "s/^version: .*/version: $LATEST_TAG/I" lzc-manifest.yml
