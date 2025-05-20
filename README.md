@@ -8,7 +8,7 @@
 
 ### Base Image
 
-Resilo Sync's official [docker image](3), cached to LazyCat's registry for best performance.
+Resilo Sync's official [docker image][3], cached to LazyCat's registry for best performance.
 
 ### Download 
 

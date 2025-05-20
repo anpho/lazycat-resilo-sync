@@ -20,7 +20,8 @@ application:
       port: 8888
 services:
   resilio:
-    image: registry.lazycat.cloud/anpho/resilio/sync:c5dbffd432c06214
+    image: ##
+    #registry.lazycat.cloud/anpho/resilio/sync:c5dbffd432c06214
     binds:
     #  - /lzcapp/run/mnt/home/ResilioSync:/mnt/sync
       - /lzcapp/var/data:/mnt/sync
