@@ -1,6 +1,6 @@
 # Resilo Sync for LazyCat Microserver.
 
-[![CI](https://github.com/anpho/lazycat-resilo-sync/actions/workflows/blank.yml/badge.svg)](https://github.com/anpho/lazycat-resilo-sync/actions/workflows/blank.yml)
+[![LoadAndPack](https://github.com/anpho/lazycat-resilo-sync/actions/workflows/pack.yml/badge.svg)](https://github.com/anpho/lazycat-resilo-sync/actions/workflows/pack.yml)
 
 [Resilo Sync][1] is a BitTorrent based file sharing tool. this is the raw project files used to build the lpk file for [LazyCat][2].
 
